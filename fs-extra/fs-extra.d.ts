@@ -172,10 +172,10 @@ declare module "fs-extra" {
     export function ensureDirSync(path: string): void;
 	export function ensureFile(path: string, cb: (err: Error) => void): void;
 	export function ensureFileSync(path: string): void;
-	export function ensureLink(path: string, cb: (err: Error) => void): void;
-	export function ensureLinkSync(path: string): void;
-	export function ensureSymlink(path: string, cb: (err: Error) => void): void;
-	export function ensureSymlinkSync(path: string): void;
+	export function ensureLink(srcpath: string, destpath: string, cb: (err: Error) => void): void;
+	export function ensureLinkSync(srcpath: string, destpath: string): void;
+	export function ensureSymlink(srcpath: string, destpath: string, cb: (err: Error) => void): void;
+	export function ensureSymlinkSync(srcpath: string, destpath: string): void;
     export function emptyDir(path: string, callback?: (err: Error) => void): void;
     export function emptyDirSync(path: string): boolean;
 
