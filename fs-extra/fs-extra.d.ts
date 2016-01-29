@@ -49,6 +49,11 @@ declare module "fs-extra" {
 	    perserveTimestamps?: boolean, 
 	    filter?: (src: string) => boolean
 	  }, callback?: (err: Error) => void): void;
+	export function copy(src: string, dest: string, options: {
+	    clobber?: boolean, 
+	    perserveTimestamps?: boolean, 
+	    filter?: (src: string) => boolean
+	  }, callback?: (err: Error) => void): void;
 
 	export function copySync(src: string, dest: string): void;
 	export function copySync(src: string, dest: string, filter: CopyFilter): void;
