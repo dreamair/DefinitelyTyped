@@ -5,7 +5,7 @@
 
 declare module "mv" {
 	function mv(src: string, dest: string, callback: (err: Error) => void): void;
-	function mv(src: string, dest: string, options: { mkdirp: boolean, clobber: boolean }, callback: (err: Error) => void): void;
+	function mv(src: string, dest: string, options: { mkdirp?: boolean, clobber?: boolean }, callback: (err: Error) => void): void;
 	module mv {}
 	export = mv
 }
