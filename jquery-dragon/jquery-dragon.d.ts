@@ -5,6 +5,9 @@ interface DragonOptions {
 	axis?: string
 	within?: JQuery
 	handle?: JQuery | string
+	dragStart?: (evn?: JQueryEventObject) => void
+	drag?: (evn?: JQueryEventObject) => void
+	dragEnd?: (evn?: JQueryEventObject) => void
 }
 
 interface JQuery {
