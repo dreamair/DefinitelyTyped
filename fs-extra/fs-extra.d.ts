@@ -184,6 +184,8 @@ declare module "fs-extra" {
 	export function ensureSymlinkSync(srcpath: string, destpath: string): void;
     export function emptyDir(path: string, callback?: (err: Error) => void): void;
     export function emptyDirSync(path: string): boolean;
+	export function move(src: string, dest: string, callback: (err: Error) => void): void;
+	export function move(src: string, dest: string, options: { mkdirp?: boolean, clobber?: boolean }, callback: (err: Error) => void): void;
 
 	export interface CopyFilterFunction {
 		(src: string): boolean
